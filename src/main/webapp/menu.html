@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>FoodHub - Menu</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#f5f5f5;
+}
+
+/* ---------------- NAVBAR ---------------- */
+
+nav{
+background:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 60px;
+box-shadow:0 2px 10px rgba(0,0,0,.1);
+}
+
+.logo{
+font-size:30px;
+font-weight:bold;
+color:#ff6b00;
+}
+
+.nav-links a{
+text-decoration:none;
+margin:0 15px;
+font-weight:bold;
+color:#333;
+}
+
+.nav-links a:hover{
+color:#ff6b00;
+}
+
+.right-links a{
+text-decoration:none;
+margin-left:18px;
+font-weight:bold;
+color:#333;
+}
+
+.right-links a:hover{
+color:#ff6b00;
+}
+
+/* ---------------- Restaurant Info ---------------- */
+
+.restaurant-info{
+
+width:90%;
+margin:35px auto;
+background:white;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 4px 15px rgba(0,0,0,.1);
+
+}
+
+.restaurant-info img{
+
+width:100%;
+height:320px;
+object-fit:cover;
+
+}
+
+.restaurant-details{
+
+padding:25px;
+
+}
+
+.restaurant-details h1{
+
+font-size:36px;
+margin-bottom:10px;
+color:#222;
+
+}
+
+.restaurant-details p{
+
+margin:8px 0;
+color:#666;
+font-size:17px;
+
+}
+
+.rating{
+
+color:green;
+font-weight:bold;
+
+}
+
+/* ---------------- Menu Heading ---------------- */
+
+.menu-heading{
+
+width:90%;
+margin:auto;
+margin-top:30px;
+margin-bottom:25px;
+
+}
+
+.menu-heading h2{
+
+font-size:32px;
+color:#333;
+
+}
+
+/* ---------------- Menu Grid ---------------- */
+
+.container{
+
+width:90%;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+margin-bottom:50px;
+
+}
+
+/* ---------------- Menu Card ---------------- */
+
+.card{
+
+background:white;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+transition:.3s;
+
+}
+
+.card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.card img{
+
+width:100%;
+height:220px;
+object-fit:cover;
+
+}
+
+.details{
+
+padding:18px;
+
+}
+
+.details h3{
+
+font-size:24px;
+margin-bottom:10px;
+color:#222;
+
+}
+
+.details p{
+
+margin:7px 0;
+color:#666;
+
+}
+
+.price{
+
+font-size:22px;
+font-weight:bold;
+color:#ff6b00;
+
+}
+
+button{
+
+width:100%;
+margin-top:15px;
+padding:12px;
+border:none;
+border-radius:8px;
+background:#ff6b00;
+color:white;
+font-size:16px;
+cursor:pointer;
+
+}
+
+button:hover{
+
+background:#e55d00;
+
+}
+
+/* ---------------- Footer ---------------- */
+
+footer{
+
+background:#222;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:30px;
+
+}
+
+/* ---------------- Responsive ---------------- */
+
+@media(max-width:992px){
+
+.container{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:650px){
+
+.container{
+
+grid-template-columns:1fr;
+
+}
+
+nav{
+
+flex-direction:column;
+gap:15px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">
+FoodHub
+</div>
+
+<div class="nav-links">
+
+<a href="#">Home</a>
+<a href="#">Restaurants</a>
+<a href="#">Offers</a>
+<a href="#">Search</a>
+
+</div>
+
+<div class="right-links">
+
+<a href="#">Cart 🛒</a>
+<a href="#">Profile 👤</a>
+
+</div>
+
+</nav>
+
+<!-- Restaurant Details -->
+
+<div class="restaurant-info">
+
+<img src="images/pizza.jpg">
+
+<div class="restaurant-details">
+
+<h1>Pizza Palace</h1>
+
+<p>🍽️ Italian, Pizza, Fast Food</p>
+
+<p class="rating">⭐ 4.6</p>
+
+<p>Freshly baked pizzas, burgers, pasta and delicious desserts served with love.</p>
+
+<p>📍 MG Road, Bangalore</p>
+
+</div>
+
+</div>
+
+<!-- Menu -->
+
+<div class="menu-heading">
+
+<h2>Our Menu</h2>
+
+</div>
+
+<div class="container">
+
+<!-- Item 1 -->
+
+<div class="card">
+
+<img src="images/margherita.jpg">
+
+<div class="details">
+
+<h3>Margherita Pizza</h3>
+
+<p>Classic cheese pizza topped with mozzarella and fresh basil.</p>
+
+<p class="rating">⭐ 4.7</p>
+
+<p class="price">₹249</p>
+
+<button>Add to Cart</button>
+
+</div>
+
+</div>
+
+<!-- Item 2 -->
+
+<div class="card">
+
+<img src="images/burger.jpg">
+
+<div class="details">
+
+<h3>Chicken Burger</h3>
+
+<p>Grilled chicken patty with lettuce, cheese and special sauce.</p>
+
+<p class="rating">⭐ 4.5</p>
+
+<p class="price">₹199</p>
+
+<button>Add to Cart</button>
+
+</div>
+
+</div>
+
+<!-- Item 3 -->
+
+<div class="card">
+
+<img src="images/pasta.jpg">
+
+<div class="details">
+
+<h3>White Sauce Pasta</h3>
+
+<p>Creamy white sauce pasta with mushrooms and veggies.</p>
+
+<p class="rating">⭐ 4.8</p>
+
+<p class="price">₹279</p>
+
+<button>Add to Cart</button>
+
+</div>
+
+</div>
+
+<!-- Item 4 -->
+
+<div class="card">
+
+<img src="images/fries.jpg">
+
+<div class="details">
+
+<h3>French Fries</h3>
+
+<p>Crispy golden fries served with tomato ketchup.</p>
+
+<p class="rating">⭐ 4.3</p>
+
+<p class="price">₹99</p>
+
+<button>Add to Cart</button>
+
+</div>
+
+</div>
+
+<!-- Item 5 -->
+
+<div class="card">
+
+<img src="images/coke.jpg">
+
+<div class="details">
+
+<h3>Coca Cola</h3>
+
+<p>Chilled soft drink.</p>
+
+<p class="rating">⭐ 4.4</p>
+
+<p class="price">₹49</p>
+
+<button>Add to Cart</button>
+
+</div>
+
+</div>
+
+<!-- Item 6 -->
+
+<div class="card">
+
+<img src="images/brownie.jpg">
+
+<div class="details">
+
+<h3>Chocolate Brownie</h3>
+
+<p>Soft chocolate brownie served with ice cream.</p>
+
+<p class="rating">⭐ 4.9</p>
+
+<p class="price">₹149</p>
+
+<button>Add to Cart</button>
+
+</div>
+
+</div>
+
+</div>
+
+<footer>
+
+© 2026 FoodHub | Fresh Food Delivered
+
+</footer>
+
+</body>
+
+</html>

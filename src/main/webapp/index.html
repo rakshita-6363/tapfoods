@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FoodHub | Home</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#fffaf5;color:#333}
+.hero{min-height:100vh;background:linear-gradient(135deg,#fff7ef,#ffe6cf);display:flex;align-items:center;justify-content:space-between;padding:60px 8%}
+.left{width:48%}.right{width:45%}
+.logo{font-size:42px;font-weight:700;color:#ff6b00;margin-bottom:20px}
+.tag{display:inline-block;background:#fff;padding:8px 18px;border-radius:30px;color:#ff6b00;font-weight:bold;margin-bottom:18px;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+h1{font-size:58px;line-height:1.1;margin-bottom:20px}
+p{font-size:19px;line-height:1.7;color:#555}
+.btn{display:inline-block;margin-top:30px;background:#ff6b00;color:#fff;text-decoration:none;padding:16px 34px;border-radius:35px;font-size:18px;font-weight:bold}
+.btn:hover{background:#e65f00}
+.right img{width:100%;border-radius:25px;box-shadow:0 12px 25px rgba(0,0,0,.15)}
+.section{padding:70px 8%}
+.title{text-align:center;color:#ff6b00;font-size:36px;margin-bottom:40px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.card{background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 5px 15px rgba(0,0,0,.08);transition:.3s}
+.card:hover{transform:translateY(-8px)}
+.card img{width:100%;height:190px;object-fit:cover}.card h3{text-align:center;padding:16px}
+.app{background:#ff6b00;color:#fff;border-radius:22px;padding:45px;display:flex;justify-content:space-between;align-items:center}
+.store{display:inline-block;margin:12px 12px 0 0;background:#fff;color:#ff6b00;padding:12px 18px;border-radius:8px;text-decoration:none;font-weight:bold}
+.cities{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.city{background:#fff;padding:18px;border-radius:12px;text-align:center;box-shadow:0 3px 10px rgba(0,0,0,.08);font-weight:bold}
+.footer{background:#222;color:#ddd;text-align:center;padding:25px}
+@media(max-width:900px){.hero{flex-direction:column}.left,.right{width:100%}h1{font-size:42px}.grid{grid-template-columns:repeat(2,1fr)}.cities{grid-template-columns:repeat(2,1fr)}.app{flex-direction:column;text-align:center}}
+</style></head><body>
+<div class="hero">
+<div class="left">
+<div class="logo">🍴 FoodHub</div>
+<div class="tag">Delivering Happiness</div>
+<h1>Food Delivery From Your Favorite Restaurants</h1>
+<p>Craving delicious food? Explore a variety of cuisines from top-rated restaurants and get your favorite meals delivered fresh to your doorstep.</p>
+<a href="restaurant" class="btn">Explore Restaurants</a>
+</div>
+<div class="right">
+<img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200" alt="Food">
+</div></div>
+<div class="section"><div class="title">Popular Dishes</div><div class="grid">
+<div class="card"><img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=600"><h3>Pizza</h3></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600"><h3>Burger</h3></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=600"><h3>Biryani</h3></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1612929633738-8fe44f7ec841?w=600"><h3>Noodles</h3></div>
+</div></div>
+<div class="section"><div class="app"><div><h2>Get the FoodHub App</h2><p>Order faster, track deliveries live, and enjoy exclusive app-only offers.</p><a class="store" href="#">Google Play</a><a class="store" href="#">App Store</a></div><div style="font-size:90px">📱</div></div></div>
+<div class="section"><div class="title">Cities We Deliver To</div><div class="cities">
+<div class="city">Bengaluru</div><div class="city">Hyderabad</div><div class="city">Chennai</div><div class="city">Mumbai</div><div class="city">Delhi</div><div class="city">Pune</div><div class="city">Kolkata</div><div class="city">Mysuru</div><div class="city">Mangalore</div><div class="city">Coimbatore</div>
+</div></div>
+<div class="footer">© 2026 FoodHub. All Rights Reserved.</div>
+</body></html>

@@ -1,0 +1,229 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+String error = (String)request.getAttribute("error");
+Boolean showRegister = (Boolean)request.getAttribute("showRegister");
+%>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FoodHub | Login</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#ff6b35,#ff9f43);
+}
+
+.container{
+    width:380px;
+    background:#fff;
+    padding:35px;
+    border-radius:12px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}
+
+.container h2{
+    text-align:center;
+    color:#ff6b35;
+    margin-bottom:25px;
+}
+
+.input-group{
+    margin-bottom:18px;
+}
+
+.input-group label{
+    display:block;
+    margin-bottom:6px;
+    font-weight:bold;
+    color:#444;
+}
+
+.input-group input{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:6px;
+    font-size:15px;
+    outline:none;
+}
+
+.input-group input:focus{
+    border-color:#ff6b35;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    background:#ff6b35;
+    color:white;
+    border:none;
+    border-radius:6px;
+    font-size:17px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#e65c28;
+}
+
+.links{
+    margin-top:18px;
+    text-align:center;
+}
+
+.links p{
+    margin-top:10px;
+    color:#555;
+}
+
+.links a{
+    color:#ff6b35;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.links a:hover{
+    text-decoration:underline;
+}
+
+
+.error-box{
+    background:#ffe5e5;
+    color:#d32f2f;
+    border:1px solid #f5bcbc;
+    padding:12px;
+    border-radius:8px;
+    margin-bottom:20px;
+    text-align:center;
+    font-weight:bold;
+}
+
+.register-btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:10px 18px;
+    background:#ff6b35;
+    color:white;
+    text-decoration:none;
+    border-radius:6px;
+    font-weight:bold;
+}
+
+.register-btn:hover{
+    background:#e65c28;
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<h2>Login to FoodHub</h2>
+
+
+
+<%
+String message = (String) session.getAttribute("message");
+
+if(message != null)
+{
+%>
+
+<div class="error-box">
+    <%= message %>
+</div>
+
+<%
+session.removeAttribute("message");
+}
+%>
+
+<%
+if(error != null)
+{
+%>
+
+
+<div class="error-box">
+    <%= error %>
+
+    <%
+    if(showRegister != null && showRegister)
+    {
+    %>
+
+    <br><br>
+
+    <a href="register.html" class="register-btn">
+        Register Now
+    </a>
+
+    <%
+    }
+    %>
+
+</div>
+
+<%
+}
+%>
+
+
+<form action="/tapfoods/login" method="post">
+
+<div class="input-group">
+<label>Email</label>
+<input
+type="email"
+name="email"
+placeholder="Enter your Email"
+required>
+</div>
+
+<div class="input-group">
+<label>Password</label>
+<input
+type="password"
+name="password"
+placeholder="Enter your Password"
+required>
+</div>
+
+<button type="submit">Login</button>
+
+<div class="links">
+
+<p><a href="#">Forgot Password?</a></p>
+
+<p>
+Don't have an account?
+<a href="register.html">Register</a>
+</p>
+
+</div>
+
+</form>
+
+</div>
+
+</body>
+</html>
